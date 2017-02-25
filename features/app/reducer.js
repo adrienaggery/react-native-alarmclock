@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-import routing from 'features/routing'
+import routing from '../routing'
 
 export default combineReducers({
     [routing.constants.NAME]: routing.reducer
