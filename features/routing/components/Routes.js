@@ -1,16 +1,18 @@
-import { Actions, Scene, Router } from 'react-native-router-flux'
+import React from 'react'
+import { Scene, Router } from 'react-native-router-flux'
 import { connect } from 'react-redux'
 
+import alarms from '../../alarms'
+
 const RouterWithRedux = connect()(Router)
-const scenes = Actions.create(
-    <Scene key='root'>
-        <Scene key='alarms' component={Alarms}/>
-        <Scene key='newalarm' component={NewAlarm}/>
-    </Scene>
-)
 
 const Routes = () => (
-    <RouterWithRedux scenes={scenes}/>
+    <RouterWithRedux hideNavBar={true}>
+        <Scene key='root'>
+            <Scene key='alarms' initial={true} component={alarms.components.Alarms}/>
+            <Scene key='newalarm' component={alarms.components.Alarms}/>
+        </Scene>
+    </RouterWithRedux>
 )
 
 export default Routes

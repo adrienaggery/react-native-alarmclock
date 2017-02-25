@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppRegistry } from 'react-native'
 
-import App from 'features/app'
+import app from './features/app'
 
-AppRegistry.registerComponent('alarmclock', App.components.App)
+AppRegistry.registerComponent('alarmclock', app.components.App)

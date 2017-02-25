@@ -1,10 +1,10 @@
-import { React } from 'react'
+import React from 'react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-import reducer from '..'
+import reducer from '../reducer'
 
-import routing from 'features/routing'
+import routing from '../../routing'
 
 const store = createStore(reducer)
 
